@@ -3,6 +3,7 @@ body {
     padding: 0;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #2a2a2a;
@@ -60,8 +61,6 @@ body {
     width: 150px;
     background: white;
     mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
-    /* top: -120px;
-    left: -120px; */
     transform: scale(0.5) rotate(0deg);
     animation: starMove 3s ease-in-out forwards;
 }
@@ -112,3 +111,50 @@ body {
     }
 }
 
+button {
+    position: absolute;
+    bottom: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+.base.restart::before {
+    animation: none;
+}
+
+.base.play::before {
+    animation: fillTriangular 3s ease-in-out forwards;
+}
+
+.star.restart {
+    animation: none;
+}
+
+.star.play {
+    animation: starMove 3s ease-in-out forwards;
+}
+
+.container.restart {
+    animation: none;
+}
+
+.container.play {
+    animation: containerFloat 2s 3s ease-in-out forwards;
+}
+
+.text.restart {
+    animation: none;
+}
+
+.text.play {
+    animation: textAppear 2s 3s ease-in-out forwards;
+}
